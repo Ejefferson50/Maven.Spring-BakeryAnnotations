@@ -1,8 +1,6 @@
 package com.zipcodewilmington.bakery.models;
 
-import org.springframework.stereotype.Service;
 
-@Service
 public class Muffin {
 
     private Long id;
@@ -30,5 +28,19 @@ public class Muffin {
 
     public void setFlavor(String flavor) {
         this.flavor = flavor;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Muffin muffin = (Muffin) o;
+        return Objects.equals(id, muffin.id) &&
+                Objects.equals(flavor, muffin.flavor);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, flavor);
     }
 }
