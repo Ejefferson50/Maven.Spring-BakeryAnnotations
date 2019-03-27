@@ -1,5 +1,8 @@
 package com.zipcodewilmington.bakery.models;
 
+import org.springframework.stereotype.Service;
+
+@Service
 public class Muffin {
 
     private Long id;

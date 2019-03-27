@@ -1,5 +1,7 @@
 package com.zipcodewilmington.bakery.models;
 
+import org.springframework.stereotype.Service;
+
 
 public class Baker {
     private Long id;
